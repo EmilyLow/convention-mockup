@@ -1,4 +1,4 @@
-export default testData = {
+let testData = {
 
     settings: {
         dayNum: 3,
@@ -55,5 +55,7 @@ export default testData = {
 
     ]
 
-}
+};
+
+export default testData;
    
