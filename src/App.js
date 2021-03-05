@@ -1,10 +1,11 @@
-import logo from './logo.svg';
-import './App.css';
+
+
+import Schedule from "./components/Schedule";
 
 function App() {
   return (
-    <div >
-      <h1>Convention Mockup</h1>
+    <div>
+      <Schedule/>
     </div>
   );
 }
