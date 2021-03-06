@@ -41,6 +41,18 @@ function Schedule() {
     return(
         
         <ScheduleContainer settings={settings}> 
+            <DayLabel day={0}> 
+                <DayH>Fri</DayH>
+                <DayH>7</DayH>
+            </DayLabel>
+            <DayLabel day={1}> 
+                <DayH>Sat</DayH>
+                <DayH>8</DayH>
+            </DayLabel>
+            <DayLabel day={2}> 
+                <DayH>Sun</DayH>
+                <DayH>9</DayH>
+            </DayLabel>
             {hourLabels}
             {hours}
             {testData.events.map(listing => {
@@ -56,7 +68,7 @@ const ScheduleContainer = styled.div`
     display: grid;
 
     grid-template-columns: 50px repeat(18, 32px);
-    grid-template-rows: 40px repeat(${(props) => props.settings.hourNum * 4}, 10px);
+    grid-template-rows: 80px repeat(${(props) => props.settings.hourNum * 4}, 10px);
 
    // grid-template-columns: [time-labels] 50px [day1]
 `;
@@ -95,4 +107,30 @@ const HourLabel = styled.div`
 
 
 
+`;
+
+const DayLabel = styled.div`
+
+    grid-column-start: ${(props) => props.day * 6 + 2};
+    grid-column-end: span 6;
+    grid-row-start: 1;
+    grid-row-end: span 1;
+
+    
+
+    background: 
+    linear-gradient(grey, grey)  bottom left / 1px 50% ;
+   background-repeat:no-repeat;
+
+   display: flex;
+   flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+
+ 
+`
+
+const DayH = styled.h3`
+
+    margin: 0;
 `;

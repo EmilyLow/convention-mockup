@@ -2,7 +2,7 @@ let testData = {
 
     settings: {
         dayNum: 3,
-        hourNum: 12,
+        hourNum: 13,
         startHour: 9,
         startDate: 7,
         days: ["Fri", "Sat", "Sun"]
@@ -40,7 +40,7 @@ let testData = {
         },
         {
             name: "Merchants",
-            startTime: 10,
+            startTime: 9.5,
             endTime: 15,
             day: 2,
             startCol: 8,
@@ -122,7 +122,7 @@ let testData = {
         {
             name: "Open Bar",
             startTime: 19,
-            endTime: 21,
+            endTime: 21.5,
             day: 2,
             startCol: 11,
             span: 3,
@@ -130,7 +130,7 @@ let testData = {
         },
         {
             name: "Merchants",
-            startTime: 10,
+            startTime: 9.5,
             endTime: 15,
             day: 3,
             startCol: 14,
