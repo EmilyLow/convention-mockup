@@ -55,7 +55,7 @@ export default Schedule;
 const ScheduleContainer = styled.div`
     display: grid;
 
-    grid-template-columns: 50px repeat(18, 24px);
+    grid-template-columns: 50px repeat(18, 32px);
     grid-template-rows: 40px repeat(${(props) => props.settings.hourNum * 4}, 10px);
 
    // grid-template-columns: [time-labels] 50px [day1]

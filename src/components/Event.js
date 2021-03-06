@@ -21,11 +21,16 @@ const EventStyle = styled.div`
 
     display: flex;
     justify-content: center;
-    
+
+   // margin-left: 1px;
+   //border: 1px solid black;
+   margin: 1px;
+   
+  
 `;
 
 const Label = styled.p`
-  font-size: 12px;
+  font-size: 14px;
   text-align: center;
 
 `;
