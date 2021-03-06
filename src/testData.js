@@ -2,7 +2,7 @@ let testData = {
 
     settings: {
         dayNum: 3,
-        hourNum: 10,
+        hourNum: 12,
         startHour: 9,
         startDate: 7,
         days: ["Fri", "Sat", "Sun"]

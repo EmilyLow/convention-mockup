@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 import testData from "../testData";
+import Event from "./Event";
 
 function Schedule() {
 
@@ -42,6 +43,9 @@ function Schedule() {
         <ScheduleContainer settings={settings}> 
             {hourLabels}
             {hours}
+            {testData.events.map(listing => {
+                return <Event details = {listing}/>;
+            })}
         </ScheduleContainer>
     );
 }
