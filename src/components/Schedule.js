@@ -34,6 +34,7 @@ function Schedule() {
 
     //Check overlap function
     //Give column based on overlap
+    //Maybe give a length property based off of number of rows?
 
 
     return(
@@ -50,20 +51,22 @@ export default Schedule;
 const ScheduleContainer = styled.div`
     display: grid;
 
-    grid-template-columns: 50px repeat(${(props) => props.settings.dayNum}, 80px);
+    grid-template-columns: 50px repeat(18, 24px);
     grid-template-rows: 40px repeat(${(props) => props.settings.hourNum * 4}, 10px);
+
+   // grid-template-columns: [time-labels] 50px [day1]
 `;
 
 const Hour = styled.div`
 
-grid-column-start: ${(props) => props.day + 2};
-grid-column-end: span 1;
-grid-row-start: ${(props) => props.hour *4 + 2};
-grid-row-end: span 4;
+    grid-column-start: ${(props) => props.day * 6 + 2};
+    grid-column-end: span 6;
+    grid-row-start: ${(props) => props.hour *4 + 2};
+    grid-row-end: span 4;
 
-outline: 1px solid gray;
-margin-top: 1px;
-margin-left: 1px;
+    outline: 1px solid gray;
+    margin-top: 1px;
+    margin-left: 1px;
 
 `
 
