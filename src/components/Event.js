@@ -3,8 +3,8 @@ import styled from "styled-components";
 
 function Event({details}) {
 
-    console.log("Event created");
-    console.log(details);
+    // console.log("Event created");
+    // console.log(details);
 
     return(
         <EventStyle details={details}>
