@@ -64,14 +64,10 @@ function Schedule() {
 
 export default Schedule;
 
-// grid-template-columns: 50px repeat(18, 32px);
-// grid-template-columns: 50px repeat(${(props) => props.dayNum * 3}, 32px);
-//  grid-template-columns: 50px repeat(calc(12 * ${(props) => props.dayNum}), 32px);
+
 const ScheduleContainer = styled.div`
     display: grid;
-   console.log(props.dayNum);
-   // grid-template-columns: 50px repeat(${(props) => props.dayNum * 3}, 32px);
-    grid-template-columns: 50px repeat(calc(12 * ${(props) => props.settings.dayNum}), 32px);
+    grid-template-columns: 50px repeat(calc(12 * ${(props) => props.settings.dayNum}), 16px);
     grid-template-rows: 80px repeat(${(props) => props.settings.hourNum * 4}, 10px);
 
   
@@ -79,8 +75,8 @@ const ScheduleContainer = styled.div`
 
 const Hour = styled.div`
 
-    grid-column-start: ${(props) => props.day * 6 + 2};
-    grid-column-end: span 6;
+    grid-column-start: ${(props) => props.day * 12 + 2};
+    grid-column-end: span 12;
     grid-row-start: ${(props) => props.hour *4 + 2};
     grid-row-end: span 4;
 
@@ -97,25 +93,20 @@ const HourLabel = styled.div`
     grid-row-start: ${(props) => props.hour *4 + 2};
     grid-row-end: span 4;
 
-    // border: 1px solid grey;
+    
     display: flex;
     justify-content: center;
     align-items: center;
-
-
-
 
     background: 
     linear-gradient(grey, grey) top right / 50% 1px ;
     background-repeat:no-repeat;
 
-
-
 `;
 
 const DayLabel = styled.div`
 
-    grid-column-start: ${(props) => props.day * 6 + 2};
+    grid-column-start: ${(props) => props.day * 12 + 2};
     grid-column-end: span 6;
     grid-row-start: 1;
     grid-row-end: span 1;

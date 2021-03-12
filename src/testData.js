@@ -15,7 +15,7 @@ let testData = {
             endTime: 19,
             day: 1,
             startCol: 2,
-            span: 6,
+            span: 12,
             color: "#A3F8A3" //green
         }, 
         {
@@ -24,7 +24,7 @@ let testData = {
             endTime: 21,
             day: 1,
             startCol: 2,
-            span: 3,
+            span: 6,
             color: "#A8EBF3" //blue
 
 
@@ -34,17 +34,18 @@ let testData = {
             startTime: 19,
             endTime: 21,
             day: 1,
-            startCol: 5,
-            span: 3,
+            startCol: 8,
+            span: 6,
             color: "#F3B0A8" //pink
         },
+        //Stopped here
         {
             name: "Merchants",
             startTime: 9.5,
             endTime: 15,
             day: 2,
-            startCol: 8,
-            span: 3,
+            startCol: 14,
+            span: 6,
             color: "#A8EBF3" //blue
         },
         {
@@ -52,8 +53,8 @@ let testData = {
             startTime: 10,
             endTime: 11.5,
             day: 2,
-            startCol: 11,
-            span: 3,
+            startCol: 20,
+            span: 6,
             color: "#ffec6e" //yellow
         },
         {
@@ -61,8 +62,8 @@ let testData = {
             startTime: 11.5,
             endTime: 12.5,
             day: 2,
-            startCol: 11,
-            span: 3,
+            startCol: 20,
+            span: 6,
             color: "#B0E5B2" //pale green
         },
         {
@@ -70,8 +71,8 @@ let testData = {
             startTime: 12.5,
             endTime: 14,
             day: 2,
-            startCol: 11,
-            span: 3,
+            startCol: 20,
+            span: 6,
             color: "#ffec6e" //yellow
         }, 
         {
@@ -79,17 +80,18 @@ let testData = {
             startTime: 15,
             endTime: 17,
             day: 2,
-            startCol: 8,
-            span: 2,
+            startCol: 14,
+            span: 4,
             color: "#ffec6e" //yellow
         },
+        //here
         {
             name: "Talk",
             startTime: 15,
             endTime: 17,
             day: 2,
-            startCol: 10,
-            span: 2,
+            startCol: 18,
+            span: 4,
             color: "#ffec6e" //yellow
         },
         {
@@ -97,8 +99,8 @@ let testData = {
             startTime: 16,
             endTime: 18,
             day: 2,
-            startCol: 12,
-            span: 2,
+            startCol: 22,
+            span: 4,
             color: "#ffec6e" //yellow
         },
         {
@@ -106,8 +108,8 @@ let testData = {
             startTime: 17,
             endTime: 18.5,
             day: 2,
-            startCol: 8,
-            span: 4,
+            startCol: 14,
+            span: 8,
             color: "#B0E5B2" //pale green
         },
         {
@@ -115,8 +117,8 @@ let testData = {
             startTime: 19,
             endTime: 20.5,
             day: 2,
-            startCol: 8,
-            span: 3,
+            startCol: 14,
+            span: 6,
             color: "#ffec6e" //yellow
         },
         {
@@ -124,8 +126,8 @@ let testData = {
             startTime: 19,
             endTime: 21.5,
             day: 2,
-            startCol: 11,
-            span: 3,
+            startCol: 20,
+            span: 6,
             color: "#A8EBF3" //blue
         },
         {
@@ -133,8 +135,8 @@ let testData = {
             startTime: 9.5,
             endTime: 15,
             day: 3,
-            startCol: 14,
-            span: 3,
+            startCol: 26,
+            span: 6,
             color: "#A8EBF3" //blue
         },
         {
@@ -142,8 +144,8 @@ let testData = {
             startTime: 11.5,
             endTime: 12.5,
             day: 3,
-            startCol: 17,
-            span: 3,
+            startCol: 32,
+            span: 6,
             color: "#B0E5B2" //pale green
         },
         {
@@ -151,8 +153,8 @@ let testData = {
             startTime: 11.5,
             endTime: 12.5,
             day: 3,
-            startCol: 17,
-            span: 3,
+            startCol: 32,
+            span: 6,
             color: "#B0E5B2" //pale green
         },
         {
@@ -160,8 +162,8 @@ let testData = {
             startTime: 15,
             endTime: 16.5,
             day: 3,
-            startCol: 14,
-            span: 3,
+            startCol: 26,
+            span: 6,
             color: "#F3B0A8" //pink
         },
         {
@@ -169,8 +171,8 @@ let testData = {
             startTime: 15,
             endTime: 16.5,
             day: 3,
-            startCol: 17,
-            span: 3,
+            startCol: 32,
+            span: 6,
             color: "#F3B0A8" //pink
         },
         {
@@ -178,8 +180,8 @@ let testData = {
             startTime: 16.5,
             endTime: 18,
             day: 3,
-            startCol: 17,
-            span: 3,
+            startCol: 32,
+            span: 6,
             color: "#F3B0A8" //pink
         },
         {
@@ -187,8 +189,8 @@ let testData = {
             startTime: 16.5,
             endTime: 17.5,
             day: 3,
-            startCol: 14,
-            span: 3,
+            startCol: 26,
+            span: 6,
             color: "#ffec6e" //yellow
         },
         {
@@ -196,8 +198,8 @@ let testData = {
             startTime: 17.5,
             endTime: 19,
             day: 3,
-            startCol: 14,
-            span: 3,
+            startCol: 26,
+            span: 6,
             color: "#B0E5B2" //pale green
         },
         {
@@ -205,8 +207,8 @@ let testData = {
             startTime: 18,
             endTime: 19,
             day: 3,
-            startCol: 17,
-            span: 3,
+            startCol: 32,
+            span: 6,
             color: "#ffec6e" //yellow
         },
         {
@@ -214,8 +216,8 @@ let testData = {
             startTime: 19,
             endTime: 21,
             day: 3,
-            startCol: 14,
-            span: 6,
+            startCol: 26,
+            span: 12,
             color: "#A3F8A3" //green
         },
 
