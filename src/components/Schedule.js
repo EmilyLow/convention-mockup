@@ -5,6 +5,17 @@ import Event from "./Event";
 
 function Schedule() {
 
+    const days = [
+        'Sun',
+        'Mon',
+        'Tue',
+        'Wed',
+        'Thu',
+        'Fri',
+        'Sat'
+    ];
+
+    
     let hours = [];
 
     let {settings} = testData;
