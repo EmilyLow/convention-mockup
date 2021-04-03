@@ -6,8 +6,19 @@ function Event({details}) {
     // console.log("Event created");
     // console.log(details);
 
+    let startTime = details.startTime.getHours() +(details.startTime.getMinutes() /60);
+    let endTime = details.endTime.getHours() + (details.endTime.getMinutes() / 60);
+    let length = endTime - startTime;
+
+    // console.log(details.name);
+    // console.log("Start time: " + startTime);
+    // console.log("Endtime: " + endTime);
+    // console.log("Length: " + length);
+
+  
+
     return(
-        <EventStyle details={details}>
+        <EventStyle details={details} startTime = {startTime} endTime = {endTime} length = {length}>
             <Label>{details.name}</Label>
         </EventStyle>
     );
@@ -16,7 +27,7 @@ function Event({details}) {
 
 const EventStyle = styled.div`
     grid-column: ${(props) => props.details.startCol} / span ${(props) => props.details.span};
-    grid-row: ${(props) => (props.details.startTime -9) * 4 + 2} / span ${(props) => ((props.details.endTime - props.details.startTime) * 4)};
+    grid-row: ${(props) => (props.startTime -9) * 4 + 2} / span ${(props) => (props.length * 4)};
     background-color: ${(props) => props.details.color};
 
     display: flex;

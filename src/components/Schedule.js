@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-import testData from "../testData";
+import testDataDates from "../testDataDates";
 import Event from "./Event";
 
 function Schedule() {
@@ -18,20 +18,20 @@ function Schedule() {
     
     let hours = [];
 
-    let {settings} = testData;
-
+    let {settings} = testDataDates;
+  
     for (let i = 0; i < settings.dayNum; i++) {
        for (let j = 0; j < settings.hourNum; j++) {
            //Note! Changing from 0 start to 1 start here.
            //Consider if this should be done elsewhere, based off how Date() works. 
            //Removing that for now
-        hours.push(<Hour day={i} hour={j}/>)
+        hours.push(<Hour  key = {"hour" + i + j} day={i} hour={j}/>)
      }
     }
 
     let hourLabels = [];
     for (let i = 0; i < settings.hourNum; i++) { 
-        hourLabels.push(<HourLabel hour = {i}> {militaryToStan(i + settings.startHour)}</HourLabel>);
+        hourLabels.push(<HourLabel key = {"hourlabel" + i} hour = {i}> {militaryToStan(i + settings.startHour)}</HourLabel>);
     }
 
     function militaryToStan (milHour) {
@@ -47,27 +47,43 @@ function Schedule() {
     //Check overlap function
     //Give column based on overlap
     //Maybe give a length property based off of number of rows?
-    console.log("Settings:", settings)
+    // console.log("Settings:", settings)
 
+    let dayLabels = [];
+    let labelDate = settings.startDate;
+    // console.log(labelDate);
+    for(let i = 0; i < settings.dayNum; i++) {
+        // console.log("No changes" + labelDate);
+        
+
+        if (i > 0) {
+            const currentDate = labelDate.getDate();
+            labelDate.setDate(currentDate + 1);
+        }
+        // console.log("i=" + i);
+        // console.log(labelDate);
+        
+        let  dayNum = labelDate.getDate();
+        let  dayString = days[labelDate.getDay()];
+        // console.log("Day Num: " + dayNum);
+        // console.log("DayString: " + dayString);
+
+       dayLabels[i] = <DayLabel key = {"dl" + i} day = {i}>
+
+            <DayH>{dayString}</DayH>
+            <DayH>{dayNum}</DayH>
+            </DayLabel>
+    }  
     return(
         
         <ScheduleContainer settings={settings} num={3}> 
-            <DayLabel day={0}> 
-                <DayH>Fri</DayH>
-                <DayH>7</DayH>
-            </DayLabel>
-            <DayLabel day={1}> 
-                <DayH>Sat</DayH>
-                <DayH>8</DayH>
-            </DayLabel>
-            <DayLabel day={2}> 
-                <DayH>Sun</DayH>
-                <DayH>9</DayH>
-            </DayLabel>
+           
+           
+            {dayLabels}
             {hourLabels}
             {hours}
-            {testData.events.map(listing => {
-                return <Event details = {listing}/>;
+            {testDataDates.events.map(listing => {
+                return <Event key = {listing.name + listing.startTime.getTime() + listing.endTime.getTime() + listing.startCol} details = {listing}/>;
             })}
         </ScheduleContainer>
     );
