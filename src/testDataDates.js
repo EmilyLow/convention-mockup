@@ -4,15 +4,16 @@ let testData = {
         dayNum: 3,
         hourNum: 13,
         startHour: 9,
-        startDate: 7,
+        startDate: new Date(2021, 4, 7),
+        startDate2: 7,
         days: ["Fri", "Sat", "Sun"]
     },
 
     events: [
         {
             name: "Opening Ceremony",
-            startTime: 17.5,
-            endTime: 19,
+            startTime: new Date(2021, 4, 7, 17, 30),
+            endTime: new Date(2021, 4, 7, 19, 0),
             day: 1,
             startCol: 2,
             span: 12,
@@ -20,8 +21,8 @@ let testData = {
         }, 
         {
             name: "Meet and Greet",
-            startTime: 19,
-            endTime: 21,
+            startTime: new Date(2021, 4, 7, 19, 0),
+            endTime: new Date(2021, 4, 7, 21, 0),
             day: 1,
             startCol: 2,
             span: 6,
@@ -31,18 +32,18 @@ let testData = {
         },
         {
             name: "VIP Salon",
-            startTime: 19,
-            endTime: 21,
+            startTime: new Date(2021, 4, 7, 19, 0),
+            endTime: new Date(2021, 4, 7, 21, 0),
             day: 1,
             startCol: 8,
             span: 6,
             color: "#F3B0A8" //pink
         },
-        //Stopped here
+     
         {
             name: "Merchants",
-            startTime: 9.5,
-            endTime: 15,
+            startTime: new Date(2021, 4, 8, 9, 30),
+            endTime: new Date(2021, 4, 8, 15, 0),
             day: 2,
             startCol: 14,
             span: 6,
@@ -50,8 +51,8 @@ let testData = {
         },
         {
             name: "Talk",
-            startTime: 10,
-            endTime: 11.5,
+            startTime: new Date(2021, 4, 8, 10, 0),
+            endTime: new Date(2021, 4, 8, 11, 30),
             day: 2,
             startCol: 20,
             span: 6,
@@ -59,8 +60,8 @@ let testData = {
         },
         {
             name: "Food Trucks",
-            startTime: 11.5,
-            endTime: 12.5,
+            startTime: new Date(2021, 4, 8, 11, 30),
+            endTime: new Date(2021, 4, 8, 12, 30),
             day: 2,
             startCol: 20,
             span: 6,
@@ -68,8 +69,8 @@ let testData = {
         },
         {
             name: "Talk",
-            startTime: 12.5,
-            endTime: 14,
+            startTime: new Date(2021, 4, 8, 12, 30),
+            endTime: new Date(2021, 4, 8, 14, 0),
             day: 2,
             startCol: 20,
             span: 6,
@@ -77,18 +78,18 @@ let testData = {
         }, 
         {
             name: "Talk",
-            startTime: 15,
-            endTime: 17,
+            startTime: new Date(2021, 4, 8, 15, 0),
+            endTime: new Date(2021, 4, 8, 17, 0),
             day: 2,
             startCol: 14,
             span: 4,
             color: "#ffec6e" //yellow
         },
-        //here
+      
         {
             name: "Talk",
-            startTime: 15,
-            endTime: 17,
+            startTime: new Date(2021, 4, 8, 15, 0),
+            endTime: new Date(2021, 4, 8, 17, 0),
             day: 2,
             startCol: 18,
             span: 4,
@@ -96,8 +97,8 @@ let testData = {
         },
         {
             name: "Talk",
-            startTime: 16,
-            endTime: 18,
+            startTime: new Date(2021, 4, 8, 16, 0),
+            endTime: new Date(2021, 4, 8, 18, 0),
             day: 2,
             startCol: 22,
             span: 4,
@@ -105,8 +106,8 @@ let testData = {
         },
         {
             name: "Open Panel",
-            startTime: 17,
-            endTime: 18.5,
+            startTime: new Date(2021, 4, 8, 17, 0),
+            endTime: new Date(2021, 4, 8, 18, 30),
             day: 2,
             startCol: 14,
             span: 8,
@@ -114,8 +115,8 @@ let testData = {
         },
         {
             name: "Talk",
-            startTime: 19,
-            endTime: 20.5,
+            startTime: new Date(2021, 4, 8, 19, 0),
+            endTime: new Date(2021, 4, 8, 20, 30),
             day: 2,
             startCol: 14,
             span: 6,
@@ -123,8 +124,8 @@ let testData = {
         },
         {
             name: "Open Bar",
-            startTime: 19,
-            endTime: 21.5,
+            startTime: new Date(2021, 4, 8, 19, 0),
+            endTime: new Date(2021, 4, 8, 21, 30),
             day: 2,
             startCol: 20,
             span: 6,
@@ -132,8 +133,8 @@ let testData = {
         },
         {
             name: "Merchants",
-            startTime: 9.5,
-            endTime: 15,
+            startTime: new Date(2021, 4, 9, 9, 30),
+            endTime: new Date(2021, 4, 9, 15, 0),
             day: 3,
             startCol: 26,
             span: 6,
@@ -141,17 +142,8 @@ let testData = {
         },
         {
             name: "Food Trucks",
-            startTime: 11.5,
-            endTime: 12.5,
-            day: 3,
-            startCol: 32,
-            span: 6,
-            color: "#B0E5B2" //pale green
-        },
-        {
-            name: "Food Trucks",
-            startTime: 11.5,
-            endTime: 12.5,
+            startTime: new Date(2021, 4, 9, 11, 30),
+            endTime: new Date(2021, 4, 9, 12, 30),
             day: 3,
             startCol: 32,
             span: 6,
@@ -159,8 +151,8 @@ let testData = {
         },
         {
             name: "Presentations, Group 1",
-            startTime: 15,
-            endTime: 16.5,
+            startTime: new Date(2021, 4, 9, 15, 0),
+            endTime: new Date(2021, 4, 9, 16, 30),
             day: 3,
             startCol: 26,
             span: 6,
@@ -168,8 +160,8 @@ let testData = {
         },
         {
             name: "Presentations, Group 2",
-            startTime: 15,
-            endTime: 16.5,
+            startTime: new Date(2021, 4, 9, 15, 0),
+            endTime: new Date(2021, 4, 9, 16, 30),
             day: 3,
             startCol: 32,
             span: 6,
@@ -177,8 +169,8 @@ let testData = {
         },
         {
             name: "Presentations, Group 3",
-            startTime: 16.5,
-            endTime: 18,
+            startTime: new Date(2021, 4, 9, 16, 30),
+            endTime: new Date(2021, 4, 9, 18, 0),
             day: 3,
             startCol: 32,
             span: 6,
@@ -186,8 +178,8 @@ let testData = {
         },
         {
             name: "Talk",
-            startTime: 16.5,
-            endTime: 17.5,
+            startTime: new Date(2021, 4, 9, 16, 30),
+            endTime: new Date(2021, 4, 9, 17, 30),
             day: 3,
             startCol: 26,
             span: 6,
@@ -195,8 +187,8 @@ let testData = {
         },
         {
             name: "Open Panel",
-            startTime: 17.5,
-            endTime: 19,
+            startTime: new Date(2021, 4, 9, 17, 30),
+            endTime: new Date(2021, 4, 9, 19, 0),
             day: 3,
             startCol: 26,
             span: 6,
@@ -204,8 +196,8 @@ let testData = {
         },
         {
             name: "Talk",
-            startTime: 18,
-            endTime: 19,
+            startTime: new Date(2021, 4, 9, 18, ),
+            endTime: new Date(2021, 4, 9, 19, 0),
             day: 3,
             startCol: 32,
             span: 6,
@@ -213,8 +205,8 @@ let testData = {
         },
         {
             name: "Awards",
-            startTime: 19,
-            endTime: 21,
+            startTime: new Date(2021, 4, 9, 19, 0),
+            endTime: new Date(2021, 4, 9, 21, 0),
             day: 3,
             startCol: 26,
             span: 12,
