@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import Popover from '@material-ui/core/Popover';
 import React from "react";
+import Card from '@material-ui/core/Card';
 
 import { makeStyles } from "@material-ui/core/styles";
 const useStyles = makeStyles((theme) => ({
@@ -50,8 +51,14 @@ function Event({details}) {
             horizontal: "center"
           }}
         >
-          <p>{details.speaker}</p>
-          <button>Test</button>
+            <Card>
+                <p>{details.name}</p>
+                <p>{details.speaker}</p>
+                <p>{details.summary}</p>
+                <p>{details.location}</p>
+                <button>Test</button>
+            </Card>
+         
         </Popover>
         </EventStyle>
     );
@@ -73,10 +80,18 @@ const EventStyle = styled.div`
   
 `;
 
+//NOTE: width and height are placed at 100% to help with pop-over clicking.
+//This may cause placement weirdness. 
+//This was necessary because popover does not work if it's inside the element that's triggering it (e.g. EventStyle)
 const Label = styled.p`
   font-size: 14px;
   text-align: center;
+  width: 100%;
+  height: 100%;
+  
 
 `;
+
+
 
 export default Event;
