@@ -2,8 +2,10 @@ import styled from "styled-components";
 import Popover from '@material-ui/core/Popover';
 import React from "react";
 import Card from '@material-ui/core/Card';
+import ContentPane from "./ContentPane";
 
 import { makeStyles } from "@material-ui/core/styles";
+
 const useStyles = makeStyles((theme) => ({
     typography: {
       padding: theme.spacing(2)
@@ -50,14 +52,12 @@ function Event({details}) {
             vertical: "top",
             horizontal: "center"
           }}
+          PaperProps={{
+            style: { width: '250px' },
+          }}
         >
-            <Card>
-                <p>{details.name}</p>
-                <p>{details.speaker}</p>
-                <p>{details.summary}</p>
-                <p>{details.location}</p>
-                <button>Test</button>
-            </Card>
+            <ContentPane details = {details}/>
+               
          
         </Popover>
         </EventStyle>

@@ -14,7 +14,7 @@ let testData = {
             name: "Opening Ceremony",
             speaker: "Eric Delgado",
             summary: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-            location: "",
+            location: "Lobby",
             startTime: new Date(2021, 4, 7, 17, 30),
             endTime: new Date(2021, 4, 7, 19, 0),
             day: 1,
