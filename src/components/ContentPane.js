@@ -13,13 +13,41 @@ import Subject from '@material-ui/icons/Subject';
 
 function ContentPane({details}) {
 
+    function militaryToStan (milHour, minutes) {
+        let minString = minutes;
+        if(minString === 0) {
+            minString = "00";
+        }
+        if (milHour <= 12) {
+            return "" + milHour + ":" + minString + " AM";
+        }
+        else {
+            return "" + (milHour - 12) + ":" + minString +  " PM";
+        }
+    }
 
+    const days = [
+        'Sun',
+        'Mon',
+        'Tue',
+        'Wed',
+        'Thu',
+        'Fri',
+        'Sat'
+    ];
+
+
+    const formattedStart = militaryToStan(details.startTime.getHours(), details.startTime.getMinutes());
+    const formattedEnd = militaryToStan(details.endTime.getHours(), details.endTime.getMinutes());
+    const formattedDate = "" + days[details.startTime.getDay()] + ", " +(details.startTime.getMonth() + 1) + "/" + details.startTime.getDate() + "/" + details.startTime.getFullYear();
+    const formattedTime = formattedStart + " to " + formattedEnd + ", " + formattedDate;
 
 
     return(<EventDiv>
         <Grid container>
              <Grid item xs={12}> <Typography>{details.name}</Typography> </Grid>
-         
+             <Grid item xs={12}><Typography> {formattedTime}</Typography> </Grid>
+
              <Grid item xs={12}> <Divider light/> </Grid>
 
      
@@ -33,11 +61,8 @@ function ContentPane({details}) {
             { details.summary != "" && <Grid item xs = {2}><Subject/> </Grid>}
             { details.summary != "" && <Grid item xs = {10}><Typography>{details.summary}</Typography></Grid>}
             
-            {/* { details.speaker != "" && <Typography><PeopleAlt/> {details.speaker}</Typography>}
-            
-            { details.summary != "" && <Typography><Subject/> {details.summary}</Typography>} */}
         </Grid>
-            {/* <button>Test</button> */}
+            
     </EventDiv>)
 }
 
