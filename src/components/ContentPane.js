@@ -48,7 +48,7 @@ function ContentPane({details}) {
              <Grid item xs={12}> <Typography variant={'h5'}>{details.name}</Typography> </Grid>
              <Grid item xs={12}><Typography variant={'subtitle1'}> {formattedTime}</Typography> </Grid>
 
-             <Grid item xs={12}> <Divider light/> </Grid>
+             <Grid item xs={12}> <Divider style={{marginBottom:'8px'}} /> </Grid>
 
      
 
@@ -72,7 +72,7 @@ const EventCard = styled(Card)`
 `;
 
 const EventDiv = styled.div`
-    margin: 5px;
+    margin: 8px;
 
 `;
 
