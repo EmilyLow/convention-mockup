@@ -134,7 +134,7 @@ const HourLabel = styled.div`
 const DayLabel = styled.div`
 
     grid-column-start: ${(props) => props.day * 12 + 2};
-    grid-column-end: span 6;
+    grid-column-end: span 12;
     grid-row-start: 1;
     grid-row-end: span 1;
 
@@ -147,7 +147,7 @@ const DayLabel = styled.div`
    display: flex;
    flex-direction: column;
   justify-content: space-evenly;
-  align-items: center;
+   align-items: center;
 
  
 `
