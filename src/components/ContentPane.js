@@ -45,21 +45,21 @@ function ContentPane({details}) {
 
     return(<EventDiv>
         <Grid container>
-             <Grid item xs={12}> <Typography>{details.name}</Typography> </Grid>
-             <Grid item xs={12}><Typography> {formattedTime}</Typography> </Grid>
+             <Grid item xs={12}> <Typography variant={'h5'}>{details.name}</Typography> </Grid>
+             <Grid item xs={12}><Typography variant={'subtitle1'}> {formattedTime}</Typography> </Grid>
 
              <Grid item xs={12}> <Divider light/> </Grid>
 
      
 
-            { details.location != "" && <Grid item xs = {2}><Location/> </Grid>}
-            { details.location != "" && <Grid item xs = {10}><Typography>{details.location}</Typography></Grid>}
+            { details.location !== "" && <Grid item xs = {2}><Location/> </Grid>}
+            { details.location !== "" && <Grid item xs = {10}><Typography variant = {'body1'}>{details.location}</Typography></Grid>}
 
-            { details.speaker != "" && <Grid item xs = {2}><PeopleAlt/> </Grid>}
-            { details.speaker != "" && <Grid item xs = {10}><Typography>{details.speaker}</Typography></Grid>}
+            { details.speaker !== "" && <Grid item xs = {2}><PeopleAlt/> </Grid>}
+            { details.speaker !== "" && <Grid item xs = {10}><Typography variant = {'body1'}>{details.speaker}</Typography></Grid>}
 
-            { details.summary != "" && <Grid item xs = {2}><Subject/> </Grid>}
-            { details.summary != "" && <Grid item xs = {10}><Typography>{details.summary}</Typography></Grid>}
+            { details.summary !== "" && <Grid item xs = {2}><Subject/> </Grid>}
+            { details.summary !== "" && <Grid item xs = {10}><Typography variant = {'body1'}>{details.summary}</Typography></Grid>}
             
         </Grid>
             

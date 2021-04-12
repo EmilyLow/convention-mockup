@@ -53,7 +53,7 @@ function Event({details}) {
             horizontal: "center"
           }}
           PaperProps={{
-            style: { width: '250px' },
+            style: { width: '300px' },
           }}
         >
             <ContentPane details = {details}/>
